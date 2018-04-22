@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  {% include head_meta.html %}
+  <link rel="stylesheet" href="/assets/style.css"/><!-- hack.css, MIT license, (c) 2016 EGOIST -->
+</head>
+<body>
+  <div class="hack container">
+    {{content}}
+  </div>
+  <footer class="container site-footer">
+    <nav>
+      <p>
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS feed</a>
+        {% if site.author.twitter %}/
+        <a href="https://twitter.com/{{site.author.twitter}}">Follow me on Twitter</a>{% endif %}
+      </p>
+      <p>
+        <a href="{{site.license_url}}" rel="license">&copy; Copyright {{ site.time | date:"%Y" }} {{site.author.name}}</a>
+        /
+        <a href="{{site.imprint_url}}">Imprint</a>
+      </p>
+    </nav>
+  </footer>
+</body>
+</html>
