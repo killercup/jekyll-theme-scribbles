@@ -20,6 +20,8 @@ remote_theme: killercup/jekyll-theme-scribbles
 You can configure the theme by setting some variables in your `_config.yml`. Here are some useful settings:
 
 ```yml
+twitter: # this site's twitter account, for header metadata, optional
+  username: killercup
 imprint_url: https://yourname.com/imprint/
 license_url: https://creativecommons.org/licenses/by-nc/4.0/
 feedback_url: https://github.com/yourname/your-blog/issues/new # optional
