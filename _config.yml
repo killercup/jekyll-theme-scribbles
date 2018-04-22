@@ -1,0 +1,48 @@
+title: "Jekyll Theme 'Scribbles' preview"
+description: >
+  A minimalistic Jekyll theme recreating the look of plain Markdown file (with some extras)
+url: "https://deterministic.space"
+author: &default_author
+  name: Pascal Hertleif
+  twitter: killercup
+  github: killercup
+twitter: # this site's twitter account
+  username: killercup
+imprint_url: https://pascalhertleif.de/impressum/
+license_url: https://creativecommons.org/licenses/by-nc/4.0/
+feedback_url: https://github.com/killercup/jekyll-theme-scribbles/issues/new
+repository_url: https://github.com/killercup/jekyll-theme-scribbles
+post_revisions_url: https://github.com/killercup/jekyll-theme-scribbles/commits/gh-pages/
+
+# theme settings
+colors:
+  link: "#3150d6"
+
+# Posts
+permalink: "/:title.html"
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: *default_author
+timezone: "Europe/Berlin"
+
+# Markdown rendering
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Assets
+sass:
+  style: compressed
+exclude:
+  - '.vscode'
