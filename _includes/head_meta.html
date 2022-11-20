@@ -106,9 +106,14 @@
     <meta name="description" content="{{ seo_description }}" />
     <meta property="og:description" content="{{ seo_description }}" />
   {% endif -%}
-  {% if page.url -%}
+  {% if page.canonical -%}
+    <link rel="canonical" href="{{ page.canonical }}" />
+    <meta property="og:url" content="{{ page.url | replace:'/index.html','/' | absolute_url }}" />
+  {% else -%}
+    {% if page.url -%}
     <link rel="canonical" href="{{ page.url | replace:'/index.html','/' | absolute_url }}" />
     <meta property="og:url" content="{{ page.url | replace:'/index.html','/' | absolute_url }}" />
+    {% endif -%}
   {% endif -%}
   {% if seo_site_title -%}
     <meta property="og:site_name" content="{{ seo_site_title }}" />
