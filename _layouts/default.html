@@ -22,6 +22,10 @@
         <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS feed</a>
         {% if site.author.twitter %}/
         <a href="https://twitter.com/{{site.author.twitter}}">Follow me on Twitter</a>{% endif %}
+        {% if site.author.mastodon %}/
+        <a href="{{site.author.mastodon}}">Follow me on Mastodon</a>{% endif %}
+        {% if site.author.bluesky %}/
+        <a href="{{site.author.bluesky}}">Follow me on Bluesky</a>{% endif %}
       </p>
       <p>
         <a href="{{site.license_url}}" rel="license">&copy; Copyright {{ site.time | date:"%Y" }} {{site.author.name}}</a>
