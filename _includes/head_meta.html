@@ -140,17 +140,6 @@
   {% if paginator.next_page -%}
     <link rel="next" href="{{ paginator.next_page_path | absolute_url }}">
   {% endif -%}
-  {% if site.twitter -%}
-    <meta name="twitter:site" content="@{{ site.twitter.username | replace:"@","" }}" />
-    {% if seo_page_image or page.image.twitter -%}
-      <meta name="twitter:card" content="summary_large_image" />
-    {% else -%}
-      <meta name="twitter:card" content="summary" />
-    {% endif -%}
-    {% if seo_author_twitter -%}
-      <meta name="twitter:creator" content="@{{ seo_author_twitter }}" />
-    {% endif -%}
-  {% endif -%}
   {% if site.facebook -%}
     {% if site.facebook.admins -%}
       <meta property="fb:admins" content="{{ site.facebook.admins }}" />
